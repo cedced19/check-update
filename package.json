@@ -1,0 +1,41 @@
+{
+  "name": "check-update",
+  "version": "0.0.1",
+  "description": "Check if there are a update",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "got": "^2.2.0",
+    "rc": "^0.5.4"
+  },
+  "scripts": {
+    "test": "mocha --timeout 20000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cedced19/check-update"
+  },
+  "keywords": [
+    "check",
+    "update",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/cedced19/check-update/issues"
+  },
+  "homepage": "https://github.com/cedced19/check-update",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "author": {
+    "name": "Cédric",
+    "email": "cedced19@gmail.com",
+    "url": "https://github.com/cedced19"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://cedced19.github.io/license/"
+    }
+  ]
+}
