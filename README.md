@@ -4,11 +4,15 @@ Inform users of your package of updates.
 
 ![](https://raw.githubusercontent.com/cedced19/check-update/master/demo.png)
 
+```bash
+npm install --save check-update
+```
+
 ## Example
 
 ```js
 var checkUpdate = require('check-update');
 var pkg = require('./package.json');
 
-checkUpdate({packageName: pkg.name, packageVersion: pkg.version});
+checkUpdate({packageName: pkg.name, packageVersion: pkg.version, isCLI: true});
 ```
