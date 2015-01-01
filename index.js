@@ -17,7 +17,7 @@ module.exports = function (options) {
       top = chalk.yellow('\u250C' + fill('\u2500', contentWidth) + '\u2510');
       bottom = chalk.yellow('\u2514' + fill('\u2500', contentWidth) + '\u2518');
       side = chalk.yellow('\u2502');
-      line1rest = contentWidth - stringLength(line);
+      line1rest = contentWidth - stringLength(line1);
       message = '\n\n' + top + '\n' + side + line1 + fill(' ', line1rest) + side + '\n' + bottom + '\n';
         
     } else {
