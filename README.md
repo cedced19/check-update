@@ -14,5 +14,28 @@ npm install --save check-update
 var checkUpdate = require('check-update');
 var pkg = require('./package.json');
 
-checkUpdate({packageName: pkg.name, packageVersion: pkg.version, isCLI: true});
+checkUpdate({packageName: pkg.name, packageVersion: pkg.version, isCLI: true}, function(err, latestVersion, defaultMessage){
+    if(!err){
+        console.log(defaultMessage);
+    }
+});
 ```
+
+### Options
+
+#### packageName
+
+*Required*  
+Type: `string`
+
+#### packageVersion
+
+*Required*  
+Type: `string`
+
+#### isCLI
+
+*Required*  
+Type: `boolean`  
+
+Define if your package is a cli.
