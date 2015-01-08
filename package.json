@@ -22,7 +22,15 @@
     "npm",
     "updater",
     "checker",
-    "version"
+    "version",
+    "beta",
+    "alpha",
+    "omega",
+    "patch",
+    "fx",
+    "zero",
+    "final",
+    "release"
   ],
   "bugs": {
     "url": "https://github.com/cedced19/check-update/issues"

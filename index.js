@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 var latest = require('./lib/latest-version.js'), colors = require('colors'), stringLength = require('./lib/string-length.js');
 var defaultMessage = function (latestVersion, packageVersion, packageName, isCLI) {
@@ -12,7 +13,7 @@ var defaultMessage = function (latestVersion, packageVersion, packageName, isCLI
     bottom = colors.yellow('\u2514' + fill('\u2500', contentWidth) + '\u2518');
     side = colors.yellow('\u2502');
     line1rest = contentWidth - stringLength(line1);
-    return message = '\n\n' + top + '\n' + side + line1 + fill(' ', line1rest) + side + '\n' + bottom + '\n';
+    return '\n\n' + top + '\n' + side + line1 + fill(' ', line1rest) + side + '\n' + bottom + '\n';
   } else {
     line1 = ' Update available: ' + colors.green.bold(latestVersion) + colors.dim(' (current: ' + packageVersion + ')') + ' ';
     if (isCLI) {
@@ -26,7 +27,7 @@ var defaultMessage = function (latestVersion, packageVersion, packageName, isCLI
     side = colors.yellow('\u2502');
     line1rest = contentWidth - stringLength(line1);
     line2rest = contentWidth - stringLength(line2);
-    return message = '\n\n' + top + '\n' + side + line1 + fill(' ', line1rest) + side + '\n' + side + line2 + fill(' ', line2rest) + side + '\n' + bottom + '\n';
+    return '\n\n' + top + '\n' + side + line1 + fill(' ', line1rest) + side + '\n' + side + line2 + fill(' ', line2rest) + side + '\n' + bottom + '\n';
   }
 };
 module.exports = function (options, cb) {
@@ -35,7 +36,7 @@ module.exports = function (options, cb) {
       cb(err);
       return;
     }
-    cb(err, latestVersion, defaultMessage(latestVersion, options.packageVersion, options.packageName, options.isCLI));
+    cb(null, latestVersion, defaultMessage(latestVersion, options.packageVersion, options.packageName, options.isCLI));
     return;
   });
 };
