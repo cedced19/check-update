@@ -1,6 +1,6 @@
 {
   "name": "check-update",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Check if there are a update",
   "main": "index.js",
   "dependencies": {

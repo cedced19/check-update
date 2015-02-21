@@ -1,6 +1,10 @@
-# check-update [![Build Status](https://travis-ci.org/cedced19/check-update.svg?branch=master)](https://travis-ci.org/cedced19/check-update)
+# check-update 
 
-Inform users of your package of updates.
+[![Build Status](https://travis-ci.org/cedced19/check-update.svg?branch=master)](https://travis-ci.org/cedced19/check-update)
+[![NPM version](https://badge.fury.io/js/check-update.svg)](http://badge.fury.io/js/check-update)
+
+
+Check if there are a update.
 
 ![](https://raw.githubusercontent.com/cedced19/check-update/master/demo.png)
 
