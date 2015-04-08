@@ -32,14 +32,18 @@ checkUpdate({packageName: pkg.name, packageVersion: pkg.version, isCLI: true}, f
 *Required*  
 Type: `string`
 
+Define the package name for search in NPM.
+
 #### packageVersion
 
-*Required*  
+*Required if you want a default message*   
 Type: `string`
 
-#### isCLI
+Define the version currently installed.
 
-*Required*  
+#### isCLI
+ 
 Type: `boolean`  
+Default: `false`
 
 Define if your package is a cli.

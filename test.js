@@ -6,7 +6,7 @@ describe('checkUpdate', function () {
     checkUpdate({
       packageName: 'check-update-tester',
       packageVersion: '0.0.1',
-      isCLI: false
+      isCLI: true
     }, function (err, lastestVersion, defaultMessage) {
       if (!err) {
         console.log(defaultMessage);
@@ -18,11 +18,18 @@ describe('checkUpdate', function () {
   it('should check for update and display false', function () {
     checkUpdate({
       packageName: 'check-update-tester',
-      packageVersion: '0.0.2',
-      isCLI: false
+      packageVersion: '0.0.2'
     }, function (err, lastestVersion, defaultMessage) {
       if (!err) {
         console.log(defaultMessage);
+      }
+    });
+  });
+  
+  it('should check for update and display the version', function () {
+    checkUpdate({packageName: 'check-update-tester'}, function (err, lastestVersion) {
+      if (!err) {
+        console.log(lastestVersion);
       }
     });
   });

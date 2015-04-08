@@ -7,6 +7,7 @@ var defaultMessage = function (options) {
   } else {
     var line1, line2;
     line1 = 'Update available: ' + colors.green(options.latestVersion) + colors.dim(' (current: ' + options.packageVersion + ')');
+    if (options.isCLI == undefined) options.isCLI = false;
     if (options.isCLI) {
       line2 = 'Run ' + colors.cyan('npm update -g ' + options.packageName) + ' to update. ';
     } else {
@@ -17,12 +18,16 @@ var defaultMessage = function (options) {
 };
 module.exports = function (options, cb) {
   latest(options.packageName, function (err, latestVersion) {
-    if (err) {
-      cb(err);
-      return;
-    }
     options.latestVersion = latestVersion;
-    cb(null, latestVersion, defaultMessage(options));
-    return;
+    if (err) {
+        cb(err);
+        return;
+    } else if (options.packageVersion == undefined){
+        cb(null, latestVersion, null);
+        return;
+    } else {
+        cb(null, latestVersion, defaultMessage(options));
+        return;
+    }
   });
 };
