@@ -4,7 +4,7 @@
 [![NPM version](https://badge.fury.io/js/check-update.svg)](http://badge.fury.io/js/check-update)
 
 
-Check if there are a update.
+Check if there is an update.
 
 ![](https://raw.githubusercontent.com/cedced19/check-update/master/demo.png)
 
